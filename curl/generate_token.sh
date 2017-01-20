@@ -80,8 +80,8 @@ expirationDate=$(echo $RESPONSE_XML | grep -oP '(?<=<expirationDate>).*(?=</expi
 ##############################################################################
 # Write Response
 ##############################################################################
-echo "Access Key:    $accessKey"
-echo "Secret Key:    $secretKey"
-echo "Session Token: $sessionToken"
-echo "Expiration:    $expirationDate"
+echo "AWS_ACCESS_KEY_ID=$accessKey"
+echo "AWS_SECRET_KEY=$secretKey"
+echo "AWS_SESSION_TOKEN=$sessionToken"
+(>&2 echo "Expiration: $expirationDate")
 
